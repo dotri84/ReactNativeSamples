@@ -1,0 +1,1 @@
+import Fitness from './src/Fitness';
