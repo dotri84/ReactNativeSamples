@@ -3,11 +3,11 @@ import {AppRegistry, StyleSheet, Text, TouchableOpacity, View, Dimensions} from 
 import Style from './Style';
 import Video from 'react-native-video';
 
+let width = Dimensions.get('window').width;
+let height = width / 1280.0 * 720
+
 class VideoController extends Component {
   player: Video;
-
-static_width = Dimensions.get('window').width
-
 
   render() {
        return (
@@ -25,7 +25,7 @@ static_width = Dimensions.get('window').width
        playInBackground={false}                // Audio continues to play when app entering background.
        playWhenInactive={false}                // [iOS] Video continues to play when control or notification center are shown.
        progressUpdateInterval={250.0}          // [iOS] Interval to fire onProgress (default to ~250ms)
-       style={[Style.backgroundVideo, {width: static_width, height: 120}]} />
+       style={[Style.backgroundVideo, {width: width, height: height}]} />
        )
   }
 }
