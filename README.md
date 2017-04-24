@@ -9,8 +9,13 @@ Rename folder or move to subfolders
 1. error: PCH was compiled with module cache path '/Users/gantman/Documents/Projects/rn/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG', but the path is currently '/Users/gantman/Documents/Projects/rn/PlanA/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG'
 
 SOLUTION:
-rm -rf ios/build/ModuleCache/*
+1. rm -rf ios/build/ModuleCache/*
+2. RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"XXXXXXXXXXX"
+                                               initialProperties:nil
+                                                   launchOptions:launchOptions];
 
+Remember to rename moduleName
 
 
 Learn Once Write Anywhere
