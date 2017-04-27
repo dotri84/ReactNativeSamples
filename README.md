@@ -6,7 +6,7 @@ All samples already tested and run on both iOS + Android. If you have any issues
 Issues you maybe encounter:
 
 Rename folder or move to subfolders
-1. error: PCH was compiled with module cache path '/Users/gantman/Documents/Projects/rn/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG', but the path is currently '/Users/gantman/Documents/Projects/rn/PlanA/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG'
+A) error: PCH was compiled with module cache path '/Users/gantman/Documents/Projects/rn/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG', but the path is currently '/Users/gantman/Documents/Projects/rn/PlanA/MyAwesomeProject/ios/build/ModuleCache/3UB7MQ6FP2IXG'
 
 SOLUTION:
 1. rm -rf ios/build/ModuleCache/*
@@ -16,6 +16,9 @@ SOLUTION:
                                                    launchOptions:launchOptions];
 
 Remember to rename moduleName
+
+B) Bundle Command for Android
+react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 
 
 Learn Once Write Anywhere
